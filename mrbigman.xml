@@ -506,6 +506,119 @@ pre code { line-height: 1.5; }
 
 ]]></b:skin>
 <style type='text/css'>
+/* CSS Tooltip */
+.arlina-tooltip {position:relative;display:inline-block;}
+.arlina-tooltip:before, .arlina-tooltip:after {position:absolute;opacity:0;z-index:1000;pointer-events:none;} 
+.arlina-tooltip:hover:before, .arlina-tooltip:hover:after {opacity:1;}
+.arlina-tooltip:before {content:&#39;&#39;;position:absolute;background:transparent;border:4px solid transparent;position:absolute;}  
+.arlina-tooltip:after {content:attr(data-arlina-tooltip)!important;background:#494158;color:#fff;padding:6px 8px;
+font-size:11px!important;font-family:&#39;Open Sans&#39;!important;white-space:nowrap;border-radius:2px;-webkit-backface-visibility:hidden;margin-left:initial;}
+.arlina-tooltip-top:before {bottom:140%;left:10%;margin:0 0 -9px 0;border-top-color:#494158;}
+.arlina-tooltip-top:after {bottom:125%;left:10%;margin:0 0 3px -10px!important;}
+
+/* CSS Share Button */
+.share-post{text-align:center;margin-bottom:20px;margin-top:20px;padding:10px 0;}
+.widget .post-body &gt; .share-post ul {padding:0;}
+.share-post li{float:left;margin:0 1%;width:18%;padding:0;list-style:none;position:relative;}
+.share-post li a{padding:6px 7px 6px 38px;color:#fff;display:block;border-radius:2px;font-size:13px;transition:all 0.6s ease-out;}
+.share-post li a:hover{color:#fff;}
+.share-post li .twitter{background-color:#19bfe5;}
+.share-post li .facebook{background-color:#3b5998;}
+.share-post li .gplus{background-color:#d64136;}
+.share-post li .pinterest{background-color:#cb2027;}
+.share-post li .tumblr{background-color:#304e6c;}
+.share-post li .twitter:hover,.share-post li .facebook:hover,.share-post li .gplus:hover,
+.share-post li .pinterest:hover,.share-post li .tumblr:hover{color:#fff;}
+.share-post li:last-child{margin-right:0}
+.share-post li .fa:before{position:absolute;top:0;left:0;display:inline-block;padding:5.5px 12px;font-family:fontawesome;text-align:center;color:#fff;line-height:20px;text-shadow:2px 2px rgba(0,0,0,0.1);font-size:14px;transition:all 0.6s ease-out;}
+.share-post li:hover .fa:before{text-shadow:-2px 2px rgba(0,0,0,0.1);}
+.share-post li .fa {display:initial;}
+
+@media only screen and (max-width:640px){
+.share-post li a{padding:6px 0 6px 0;}
+.share-post li .fa:before{display:none;}}
+
+@media screen and (max-width:480px) {
+.share-post li{width:100%}}
+
+/* CSS Custom Error Minion by arasdesign */
+#container-error{text-align:center;z-index:9999;width:100%;height:100%;position:fixed;top:0;right:0;bottom:0;left:0;padding:0;background-color:#EC7E65;color:#fff}
+#buttonerror{clear:both;position:absolute;background-color:rgba(255,255,255,.05);color:#EC7E65;position:absolute;left:0;right:0;bottom:15%;margin:auto;max-width:250px;padding:20px;z-index:99999;border-radius:10px;border:5px solid #fff;transition:all .5s}
+#buttonerror a{color:#fff;font-weight:700;font-size:1.5rem;text-transform:uppercase;letter-spacing:1px}
+#buttonerror:hover{background-color:rgba(255,255,255,1)}
+#buttonerror:hover a,#buttonerror a:hover{color:#EC7E65}
+.minion{position:absolute;background-color:#ffed41;height:360px;width:218px;border-radius:218px 218px 130px 130px;position:absolute;left:50%;top:45%;margin:-180px 0 0 -109px;z-index:99999}
+.glassesline1{background-color:#494949;border-radius:4px;height:12px;width:238px;position:relative;top:98px;margin:0 -10px}
+.glassesline2{background-color:#2d2d2d;border-radius:4px;height:12px;width:238px;position:relative;top:98px;margin:0 -10px;box-shadow:0 3px 0 0 rgba(0,0,0,0.15)}
+.glass1,.glass2{background-color:#e2e2e0;height:102px;width:102px;border-radius:102px;position:absolute;top:55px;box-shadow:-4px 4px 0 0 rgba(50,50,50,0.15),1px -1px 0 0 rgba(255,255,255,1)}
+.glass1{left:10px;right:auto;z-index:2}
+.glass2{right:10px;left:auto;z-index:1}
+.glass1:before,.glass2:before{background-color:#e5bf36;height:78px;width:78px;border-radius:78px;display:block;position:relative;top:12px;left:12px;content:&quot;&quot;}
+.glass1:after,.glass2:after{background-color:#FFF;height:58px;width:78px;border-radius:78px;position:absolute;top:22px;left:12px;content:&quot;&quot;;animation:eyes 5s linear 1s infinite}
+.eye1,.eye2{background-color:#724c25;height:28px;width:28px;border-radius:28px;position:absolute;top:44px;z-index:3}
+.eye1{left:46px}
+.eye2{right:46px}
+.eye1:before,.eye2:before{background-color:#2c2d2f;height:12px;width:12px;border-radius:12px;display:block;position:relative;top:8px;left:8px;content:&quot;&quot;}
+.eye1:after,.eye2:after{background-color:#FFF;height:8px;width:8px;border-radius:8px;position:absolute;top:6px;left:12px;content:&quot;&quot;}
+.mouth{background-color:#603814;height:36px;width:106px;position:absolute;border-radius:0 0 106px 106px;top:182px;left:55px;overflow:hidden}
+.mouth:before{background-color:#FFED41;height:80px;width:205px;position:relative;display:block;border-radius:0 0 150px 150px;top:-70px;left:-50px;content:&quot;&quot;;z-index:2;box-shadow:0 3px 0 0 rgba(50,50,50,0.15)}
+ul.teeth{list-style:none;z-index:1;position:absolute;top:-10px;left:-25px}
+ul.teeth li{float:left;height:15px;width:20px;background:#FFF;display:inline-block;border-radius:0 0 15px 15px}
+ul.teeth li:first-child,ul.teeth li:last-child{height:10px}
+.pants{background-color:#2b5b89;height:66px;position:relative;top:270px;border-radius:0 0 128px 128px;z-index:2}
+.pants:before{background-color:#2b5b89;height:58px;width:138px;display:block;position:relative;top:-58px;margin:0 auto;content:&quot;&quot;}
+.pants:after{background-color:#224467;height:44px;width:58px;display:block;position:relative;top:-76px;border-radius:0 0 58px 58px;margin:0 auto;content:&quot;&quot;}
+.belt-left,.belt-right{background-color:#224467;height:16px;width:70px;position:absolute;top:225px;z-index:3}
+.belt-left{left:-10px;transform:scale(1) rotate(24deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)}
+.belt-right{right:-10px;transform:scale(1) rotate(-28deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)}
+.belt-left:after,.belt-right:after{background-color:#2d2d2b;height:11px;width:11px;border-radius:11px;position:absolute;content:&quot;&quot;}
+.belt-left:after{left:56px;top:3px}
+.belt-right:after{right:57px;top:3px}
+.legs .left,.legs .right{background:#224467;height:22px;width:44px;position:absolute;top:358px;z-index:1}
+.legs .left{left:60px}
+.legs .right{right:60px}
+.legs .left:after{position:absolute;content:&quot;&quot;;height:0;width:0;border-bottom:22px solid #EC7E65;border-right:10px solid transparent}
+.legs .right:after{position:absolute;content:&quot;&quot;;height:0;width:0;border-bottom:22px solid #EC7E65;border-left:10px solid transparent;right:0}
+.shoe-l,.shoe-r{background-color:#424242;width:52px;height:18px;position:absolute;top:380px}
+.shoe-l{left:50px;border-radius:18px 0 0 0}
+.shoe-r{right:50px;border-radius:0 18px 0 0}
+.shoe-l:after,.shoe-r:after{background-color:#2d2d2d;width:56px;height:5px;position:absolute;content:&quot;&quot;;top:18px;left:-2px}
+.shoe-l:before{position:absolute;content:&quot;&quot;;height:0;width:0;border-top:5px solid #224467;border-left:34px solid transparent;left:20px}
+.shoe-r:before{position:absolute;content:&quot;&quot;;height:0;width:0;border-top:5px solid #224467;border-right:34px solid transparent;right:20px}
+.hands .left,.hands .right{background-color:#e5c034;height:100px;width:16px;position:absolute;top:242px}
+.hands .left{left:-16px;border-radius:16px 0 0 0}
+.hands .right{right:-16px;border-radius:0 16px 0 0}
+.hands .fingers-l,.hands .fingers-r{background-color:#424242;position:absolute;content:&quot;&quot;;height:16px;width:16px;top:350px;z-index:1}
+.hands .fingers-l{left:-6px;border-radius:0 16px 0 0}
+.hands .fingers-r{right:-6px;border-radius:16px 0 0 0}
+.hands .fingers-l:after,.hands .fingers-r:after{background-color:#383838;height:16px;width:16px;content:&quot;&quot;;border-radius:16px;position:absolute;top:15px;z-index:2}
+.hands .fingers-l:after{left:0}
+.hands .fingers-r:after{right:0}
+.hands .fingers-l:before,.hands .fingers-r:before{background-color:#2c2c2c;height:16px;width:16px;content:&quot;&quot;;border-radius:16px;position:absolute;top:8px;z-index:1}
+.hands .fingers-l:before{left:5px}
+.hands .fingers-r:before{right:5px}
+.hands .glove-l,.hands .glove-r{background-color:#424242;position:absolute;height:36px;width:16px;border-radius:0 0 16px 16px;top:342px;z-index:3}
+.hands .glove-l{left:-15px}
+.hands .glove-r{right:-15px}
+.hands .glove-l:before,.hands .glove-r:before{position:absolute;content:&quot;&quot;;height:0;width:0;top:-15px;border-bottom:30px solid #424242;border-left:30px solid transparent;transform:scale(1) rotate(45deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg)}
+.hands .glove-l:before{left:-7px}
+.hands .glove-r:before{right:-7px}
+
+/* Related Post Style 1 */
+.related-simplify{position:relative;padding:0;margin:15px auto;width:100%;}
+.related-simplify h4{background:#3498db;padding:8px 12px;margin:0;font-size:15px;font-weight:400;color:#fff;border:1px solid #2e88c5}
+.related-simplify ul{margin:0;padding:0}
+.related-simplify ul li{background:#f6f6f6;position:relative;list-style:none;padding:9px;margin:auto;line-height:1.4em;border:1px solid rgba(0,0,0,0.1);border-bottom:0;transition:all .3s}
+.related-simplify ul li:nth-child(odd){background:#fefefe}
+.related-simplify ul li:last-child{border-bottom:1px solid rgba(0,0,0,0.1)}
+.related-simplify ul li:before{content:&#39;\f138&#39;;font-family:fontawesome;position:absolute;margin:0 9px 0 4px;color:#2ecc71;overflow:hidden;transition:all .3s}
+.related-simplify ul li:hover:before{content:&#39;\f138&#39;;font-family:fontawesome;-webkit-animation:bounceright .3s alternate ease infinite;animation:bounceright .3s alternate ease infinite}
+.related-simplify a{color:#0383d9;font-size:13px;margin:0 0 0 30px;}
+.related-simplify a:hover{color:#0383d9;text-decoration:underline}
+.related-simplify ul li:nth-child(n+4) {display:none;}
+@-webkit-keyframes bounceright{from{-webkit-transform:translateX(0)}to{-webkit-transform:translateX(3px)}}
+@keyframes bounceright{from{transform:translateX(0)}to{transform:translateX(3px)}}
+
 /* Download Button (2) */ .download-button {margin:20px auto;padding:0;width:auto;text-align:center;} .download-inner {height:40px;display:inline-block;border:3px solid #8493A0;font-family:&#39;Open Sans&#39;, sans-serif;font-size:20px;font-weight:400;text-align:center;text-decoration:none; color:#f56954;overflow:hidden;border-radius:5px;} a.download-inner {padding:0;margin:0;line-height:0;} .download-inner .icon {margin-right:6px;} .download-inner .download-front,.download-inner .download-backup {display:block; padding:0 20px;line-height:40px;transition:margin .4s;} .download-inner .download-front {background-color:#8493A0;color:#fff;} .download-inner .download-backup {background-color:#fff;color:#8493A0;} .download-inner:hover .download-front {margin-top:-40px;}
 // Panel Kodeks
 h4.panel-title{margin-top:0;margin-bottom:0;font-size:16px;color:inherit;font-weight:500;line-height:1.1}.table-accordeon:after{clear:both}.table-accordeon:after{display:table;content:&quot; &quot;}.table-accordeon:before{display:table;content:&quot; &quot;}.fade{opacity:0;-webkit-transition:opacity .15s linear;-o-transition:opacity .15s linear;transition:opacity .15s linear}.fade.in{opacity:1}.collapse{display:none}.collapse.in{display:block}tr.collapse.in{display:table-row}tbody.collapse.in{display:table-row-group}.collapsing{position:relative;height:0;overflow:hidden;-webkit-transition-timing-function:ease;-o-transition-timing-function:ease;transition-timing-function:ease;-webkit-transition-duration:.35s;-o-transition-duration:.35s;transition-duration:.35s;-webkit-transition-property:height,visibility;-o-transition-property:height,visibility;transition-property:height,visibility}.caret{display:inline-block;width:0;height:0;margin-left:2px;vertical-align:middle;border-top:4px dashed;border-top:4px solid\9;border-right:4px solid transparent;border-left:4px solid transparent}.table-accordeon{padding-left:0;margin-bottom:0;list-style:none}.table-accordeon&gt;li{position:relative;display:block}.table-accordeon&gt;li&gt;a{position:relative;display:block;padding:10px 15px}.table-accordeon&gt;li&gt;a:focus,.table-accordeon&gt;li&gt;a:hover{text-decoration:none;background-color:#eee}.table-accordeon&gt;li.disabled&gt;a{color:#777}.table-accordeon&gt;li.disabled&gt;a:focus,.table-accordeon&gt;li.disabled&gt;a:hover{color:#777;text-decoration:none;cursor:not-allowed;background-color:transparent}.table-accordeon .open&gt;a,.table-accordeon .open&gt;a:focus,.table-accordeon .open&gt;a:hover{background-color:#eee;border-color:#337ab7}.table-accordeon .table-accordeon-divider{height:1px;margin:9px 0;overflow:hidden;background-color:#e5e5e5}.table-accordeon&gt;li&gt;a&gt;img{max-width:none}.table-accordeon-tabs{border-bottom:1px solid #ddd}.table-accordeon-tabs&gt;li{float:left;margin-bottom:-1px}.table-accordeon-tabs&gt;li&gt;a{margin-right:2px;line-height:1.42857143;border:1px solid transparent;border-radius:4px 4px 0 0}.table-accordeon-tabs&gt;li&gt;a:hover{border-color:#eee #eee #ddd}.table-accordeon-tabs&gt;li.active&gt;a,.table-accordeon-tabs&gt;li.active&gt;a:focus,.table-accordeon-tabs&gt;li.active&gt;a:hover{color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent}.tab-content&gt;.tab-pane{display:none}.tab-content&gt;.active{display:block}.table-accordeon-tabs .dropdown-menu{margin-top:-1px;border-top-left-radius:0;border-top-right-radius:0}pre{overflow:hidden;border:none;border-radius:0}.alert{position:relative;border:0;border-radius:0}.alert i{left:20px;top:20px}.alert p{overflow:hidden;margin:2px 0 0 30px}.btn{border-radius:0;margin:0 5px 5px 0;-webkit-transition:all 0.3s ease 0s;-moz-transition:all 0.3s ease 0s;-o-transition:all 0.3s ease 0s;transition:all 0.3s ease 0s}.btn.active.focus,.btn.active:focus,.btn.focus,.btn.focus:active,.btn:active:focus,.btn:focus{outline:none}a.btn{text-decoration:none!important}.table-accordeon-tabs{padding:0!important;margin:0!important;border:0}.table-accordeon-tabs &gt; li{margin:0!important}.table-accordeon-tabs &gt; li &gt; a{margin:0;border-radius:0;border:1px solid #ddd!important;border-right:0!important;border-bottom:0!important}.table-accordeon-tabs &gt; li:last-child &gt; a{border-right:1px solid #ddd!important}.table-accordeon-tabs &gt; li.active &gt; a,.table-accordeon-tabs &gt; li.active &gt; a:focus,.table-accordeon-tabs &gt; li.active &gt; a:hover{background:#F97413;color:#fff}.tab-content{border:1px solid #ddd;padding:15px}.tooltip.top .tooltip-arrow{border-top-color:#F97413}.tooltip.right .tooltip-arrow{border-right-color:#F97413}.tooltip.bottom .tooltip-arrow{border-bottom-color:#F97413}.tooltip.left .tooltip-arrow{border-left-color:#F97413}.tooltip-inner{background-color:#F97413}.panel-info&gt;.panel-heading{background-color:#d9edf7;border-color:#bce8f1}.panel-info{border-color:#bce8f1}.panel-success&gt;.panel-heading{background-color:#dff0d8;border-color:#d6e9c6}.panel-success{border-color:#d6e9c6}.panel-default&gt;.panel-heading{color:#333;background-color:#f5f5f5;border-color:#ddd}.panel-default{border-color:#ddd}.panel-group .panel{border-radius:0;-webkit-box-shadow:0 0 0;-moz-box-shadow:0 0 0;box-shadow:0 0 0}.panel-group .panel+.panel{margin-top:5px}.panel-body{padding:15px}.panel-group .panel-heading+.panel-collapse&gt;.panel-body{border-top:1px solid #ddd}.panel-default&gt;.panel-heading+.panel-collapse&gt;.panel-body{border-top-color:#ddd}.panel-info&gt;.panel-heading+.panel-collapse&gt;.panel-body{border-top-color:#bce8f1}.panel-success&gt;.panel-heading+.panel-collapse&gt;.panel-body{border-top-color:#d6e9c6}.panel-group .panel-heading{padding:0;border-radius:0}.panel-default&gt;.panel-heading a{color:#333}.panel-info&gt;.panel-heading a{color:#31708f}.panel-success&gt;.panel-heading a{color:#3c763d}.panel-group .panel-heading a{padding:10px 15px;opacity:1;display:block;text-decoration:none}.panel-group .panel-heading a:hover,.panel-group .panel-heading a:focus{text-decoration:none;opacity:0.8}.panel{border:1px solid transparent}.panel-info{border-color:#bce8f1}.panel-success{border-color:#d6e9c6}.panel-default{border-color:#ddd}
@@ -557,6 +670,13 @@ font-family:source-sans-pro;}
 </style>
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' type='text/javascript'/>
 <script src='https://cdn.rawgit.com/jquerycods/03/master/table.js' type='text/javascript'/>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<script type='text/javascript'>
+//<![CDATA[
+var relatedSimply = new Array(); var relatedSimplyNum = 0; var relatedUrls = new Array(); function related_results_labels(json) { for (var i = 0; i < json.feed.entry.length; i++) { var entry = json.feed.entry[i]; relatedSimply[relatedSimplyNum] = entry.title.$t; for (var k = 0; k < entry.link.length; k++) { if (entry.link[k].rel == 'alternate') {relatedUrls[relatedSimplyNum] = entry.link[k].href; relatedSimplyNum++; break;}}}} function removeRelatedDuplicates() { var tmp = new Array(0); var tmp2 = new Array(0); for(var i = 0; i < relatedUrls.length; i++) { if(!contains(tmp, relatedUrls[i])) { tmp.length += 1; tmp[tmp.length - 1] = relatedUrls[i]; tmp2.length += 1; tmp2[tmp2.length - 1] = relatedSimply[i];}} relatedSimply = tmp2; relatedUrls = tmp;} function contains(a, e) { for(var j = 0; j < a.length; j++) if (a[j]==e) return true; return false;} function printRelatedLabels() { var r = Math.floor((relatedSimply.length - 1) * Math.random()); var i = 0; document.write('<ul>'); while (i < relatedSimply.length && i < 20) { document.write('<li><a href="' + relatedUrls[r] + '">' + relatedSimply[r] + '</a></li>'); if (r < relatedSimply.length - 1) { r++; } else { r = 0;} i++;} document.write('</ul>');}
+//]]>
+</script>
+</b:if>
 </head>
   <body>
    
@@ -669,6 +789,47 @@ font-family:source-sans-pro;}
   <p class='comment-footer'>
     <a class='comment-link' expr:href='data:post.createLinkUrl' expr:id='data:widget.instanceId + &quot;_backlinks-create-link&quot;' target='_blank'><data:post.createLinkLabel/></a>
   </p>
+</b:includable>
+    <b:includable id='breadcrumb' var='posts'>
+<b:if cond='data:blog.homepageUrl != data:blog.url'>
+<b:if cond='data:blog.pageType == &quot;static_page&quot;'>
+<div class='breadcrumbs'><span><a expr:href='data:blog.homepageUrl' rel='tag' title='Home'>Home</a></span> / <span><data:blog.pageName/></span></div>
+<b:else/>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<!-- Breadcrumb Untuk Halaman Pos -->
+<b:loop values='data:posts' var='post'>
+<b:if cond='data:post.labels'>
+<div class='breadcrumbs'>
+Anda di sini : <span itemscope='' itemtype='http://data-vocabulary.org/Breadcrumb'><a expr:href='data:blog.homepageUrl' itemprop='url' title='Home'><span itemprop='title'>Home</span></a></span>
+<b:loop values='data:post.labels' var='label'>
+/ <span itemscope='' itemtype='http://data-vocabulary.org/Breadcrumb'><a expr:href='data:label.url + &quot;?max-results=5&quot;' expr:title='data:label.name' itemprop='url'><span itemprop='title'><data:label.name/></span></a></span>
+</b:loop>
+/ <span><data:post.title/></span>
+</div>
+<b:else/>
+<div class='breadcrumbs'><span><a expr:href='data:blog.homepageUrl' rel='tag' title='Home'>Home</a></span> / <span>Without Label</span> / <span><data:post.title/></span></div>
+</b:if>
+</b:loop>
+<b:else/>
+<b:if cond='data:blog.pageType == &quot;archive&quot;'>
+<!-- Breadcrumb Untuk Label Search dan Search Pages -->
+<div class='breadcrumbs'>
+<span><a expr:href='data:blog.homepageUrl' title='Home'>Home</a></span> / <span>Archived For <data:blog.pageName/></span>
+</div>
+<b:else/>
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+<div class='breadcrumbs'>
+<b:if cond='data:blog.pageName == &quot;&quot;'>
+<span><a expr:href='data:blog.homepageUrl' title='Home'>Home</a></span> / <span>All Post</span>
+<b:else/>
+<span><a expr:href='data:blog.homepageUrl' title='Home'>Home</a></span> / <span><data:blog.pageName/></span>
+</b:if>
+</div>
+</b:if>
+</b:if>
+</b:if>
+</b:if>
+</b:if>
 </b:includable>
     <b:includable id='comment-form' var='post'>
   <div class='comment-form'>
@@ -984,7 +1145,31 @@ font-family:source-sans-pro;}
           </div>
 
           <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
-            <data:post.body/>
+          <div expr:id='&quot;post1&quot; + data:post.id'/>
+<div class='related-simplify'>
+<b:if cond='data:post.labels'>
+<b:loop values='data:post.labels' var='label'>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&amp;max-results=3&quot;' type='text/javascript'/>
+</b:if>
+</b:loop>
+</b:if>
+<h4>Baca Juga</h4>
+<script type='text/javascript'>
+removeRelatedDuplicates();
+printRelatedLabels();
+</script>
+</div>
+<div expr:id='&quot;post2&quot; + data:post.id'><p><data:post.body/></p></div>
+<script type='text/javascript'>
+var obj0=document.getElementById(&quot;post1<data:post.id/>&quot;);
+var obj1=document.getElementById(&quot;post2<data:post.id/>&quot;);
+var s=obj1.innerHTML;
+var t=s.substr(0,s.length/2);
+var r=t.lastIndexOf(&quot;&lt;br&gt;&quot;);
+if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+4);}
+</script>
+
             <div style='clear: both;'/> <!-- clear for photos floats -->
           </div>
 
@@ -1092,7 +1277,30 @@ font-family:source-sans-pro;}
 
     <!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
     <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' expr:itemprop='(data:blog.metaDescription ? &quot;&quot; : &quot;description &quot;) + &quot;articleBody&quot;'>
-      <data:post.body/>
+     <div expr:id='&quot;post1&quot; + data:post.id'/>
+<div class='related-simplify'>
+<b:if cond='data:post.labels'>
+<b:loop values='data:post.labels' var='label'>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<script expr:src='&quot;/feeds/posts/default/-/&quot; + data:label.name + &quot;?alt=json-in-script&amp;callback=related_results_labels&amp;max-results=3&quot;' type='text/javascript'/>
+</b:if>
+</b:loop>
+</b:if>
+<h4>Related Posts</h4>
+<script type='text/javascript'>
+removeRelatedDuplicates();
+printRelatedLabels();
+</script>
+</div>
+<div expr:id='&quot;post2&quot; + data:post.id'><p><data:post.body/></p></div>
+<script type='text/javascript'>
+var obj0=document.getElementById(&quot;post1<data:post.id/>&quot;);
+var obj1=document.getElementById(&quot;post2<data:post.id/>&quot;);
+var s=obj1.innerHTML;
+var t=s.substr(0,s.length/2);
+var r=t.lastIndexOf(&quot;&lt;br&gt;&quot;);
+if(r&gt;0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+4);}
+</script>
       <div style='clear: both;'/> <!-- clear for photos floats -->
     </div>
 
@@ -1103,7 +1311,20 @@ font-family:source-sans-pro;}
     </b:if>
 
     <div class='post-footer'>
+
     <div class='post-footer-line post-footer-line-1'>
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<div class='share-post'>
+              <ul>
+                <li><a class='twitter arlina-tooltip arlina-tooltip-top' data-arlina-tooltip='Share on Twitter' expr:href='&quot;http://twitter.com/share?url=&quot; + data:post.url' rel='nofollow' target='_blank'><i class='fa fa-twitter'/>Twitter</a></li>
+                <li><a class='facebook arlina-tooltip arlina-tooltip-top' data-arlina-tooltip='Share on Facebook' expr:href='&quot;http://www.facebook.com/sharer.php?u=&quot; + data:blog.url' rel='nofollow' target='_blank'><i class='fa fa-facebook'/>Facebook</a></li>
+                <li><a class='gplus arlina-tooltip arlina-tooltip-top' data-arlina-tooltip='Share on Google Plus' expr:href='&quot;http://plus.google.com/share?url=&quot; + data:blog.url' rel='nofollow' target='_blank'><i class='fa fa-google-plus'/>Google</a></li>
+                <li><a class='tumblr arlina-tooltip arlina-tooltip-top' data-arlina-tooltip='Share on Tumblr' href='http://www.tumblr.com/share' rel='nofollow' target='_blank'><i class='fa fa-tumblr'/>Tumblr</a></li>
+                <li><a class='pinterest arlina-tooltip arlina-tooltip-top' data-arlina-tooltip='Share on Pinterest' expr:href='&quot;http://pinterest.com/pin/create/button/?url=&quot; + data:post.url + &quot;&amp;amp;media=&quot; + data:post.thumbnailUrl + &quot;&amp;amp;description= + data:post.title&quot;' target='_blank'><i class='fa fa-pinterest'/>Pinterest</a></li>
+              </ul>
+         </div>
+<div style='clear:both'/>
+</b:if>
       <!-- Test -->
 
       </div>
@@ -1398,7 +1619,21 @@ font-family:source-sans-pro;}
   </b:widget>
 </b:section>
 
-     <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'/>
+     <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
+       <b:widget id='HTML1' locked='false' title='' type='HTML'>
+         <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+       </b:widget>
+     </b:section>
         </div>
     </li>
     
